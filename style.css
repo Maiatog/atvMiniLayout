@@ -1,80 +1,87 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Helvetica;
+.container {
+  max-width: 960px;
+  padding: 20px;
+  margin: 0 auto;
+  border: 1px solid black;
+  font-family: Arial, sans-serif;
 }
 
-body {
-    background-color: #333;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 3em;
+.header {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+  border: 1px solid black;
+  background-color: #45a049;
+  color: white;
 }
 
-#calc {
-    width: 400px;
-    padding: 0.5em;
-    background-color: #c4c4c4;
-    color: #000;
-    display: flex;
-    flex-direction: column;
+#nome {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  box-sizing: border-box;
 }
 
-#calc h3 {
-    font-size: 0.8em;
-    font-weight: 300;
-    color: #666;
+#email {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  box-sizing: border-box;
 }
 
-#operations {
-    text-align: right;
+#senha {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  box-sizing: border-box;
 }
 
-#previous-operation {
-    color: #777;
-    padding: 0.2em;
-    overflow-wrap: break-word;
-    min-height: 1.6em;
+#confirmSenha {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  box-sizing: border-box;
+}
+input[type="radio"],
+input[type="checkbox"] {
+  margin-right: 10px;
 }
 
-#current-operation {
-    min-height: 1.6em;
-    font-size: 3em;
-    font-weight: 700;
-    overflow-wrap: break-word;
+.genero {
+  margin: 10px 0;
 }
 
-#buttons-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    gap: 3px;
+#campoOutroGenero {
+  display: none;
+  margin-top: 10px;
 }
 
-#buttons-container button{
-    border: 1px solid transparent;
-    border-radius: 0;
-    height: 4em;
-    font-size: 1.2em;
-    background-color: #dbdbdb;
-    cursor: pointer;
+.interesses {
+  margin: 10px 0;
 }
 
-#buttons-container .number {
-    background-color: #f3f3f3;
+#foto {
+  margin: 10px 0;
 }
 
-#buttons-container button:hover {
-    background-color: #bababa;
-    border-color: #999;
+#pais {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  box-sizing: border-box;
 }
 
-#buttons-container #equal-btn {
-    grid-column: span 2;
-    background-color: #75a5cb;
+input[type="submit"],
+input[type="reset"] {
+  padding: 10px 20px;
+  margin: 10px 5px;
+  border: none;
+  background-color: #4caf50;
+  color: white;
+  cursor: pointer;
 }
 
-#buttons-container #equal-btn:hover {
-    background-color: #3a91d8;
+input[type="submit"]:hover,
+input[type="reset"]:hover {
+  background-color: #45a049;
 }
