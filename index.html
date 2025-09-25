@@ -1,40 +1,85 @@
 <!DOCTYPE html>
-<html lang="pt-bt">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CALCULADORA</title>
+    <title>Mini Layout Responsivo</title>
     <link rel="stylesheet" href="style.css">
-    <script src="script.js" defer></script>
 </head>
 <body>
-    <div id="calc">
-        <h3>Calculadora</h3>
-        <div id="operations">
-            <div id="previous-operation"></div>
-            <div id="current-operation"></div>
-        </div>
-        <div id="buttons-container">
-            <button>CE</button>
-            <button>C</button>
-            <button>DEL</button>
-            <button>/</button>
-            <button class="number">7</button>
-            <button class="number">8</button>
-            <button class="number">9</button>
-            <button>*</button>
-            <button class="number">4</button>
-            <button class="number">5</button>
-            <button class="number">6</button>
-            <button>-</button>
-            <button class="number">1</button>
-            <button class="number">2</button>
-            <button class="number">3</button>
-            <button>+</button>
-            <button class="number">0</button>
-            <button class="number">.</button>
-            <button id="equal-btn">=</button>
-        </div>
+
+    <header class="cabecalho">
+        <h1>Traveling Around</h1>
+
+    </header>
+
+    <div class="main-content-wrapper">
+
+        <aside class="menu-lateral">
+            <h2>Menu</h2>
+            <nav>
+            <a href="#">Home</a> 
+            <a href="#">Sobre</a> 
+            <a href="#">Contato</a>
+            </nav>
+        </aside>
+
+            <section class="galeria">
+                <img src="img/muralha-da-china.webp" alt="Muralha da China">
+                <img src="img/Petra.webp" alt="Petra">
+                <img src="img/cristo-redentor.jpg" alt="Cristo Redentor">
+                <img src="img/machu-picchu.webp" alt="Machu Picchu">
+                <img src="img/chichen-itza.jfif" alt="Chichen Itza">
+                <img src="img/coliseu-roma.jfif" alt="Coliseu de Roma">
+                <img src="img/taj-mahal.webp" alt="Taj Mahal">
+            </section>
+
+        <main class="conteudo-principal">
+            <h2>As 7 Maravilhas do Mundo</h2><br>
+            <p>Você já teve aquela vontade de pegar sua mochila e sair rodando mundo a fora?</p><br>
+            <p>Então, aqui com a Traveling você pode estar usufruindo desta grande realização, com nossos passeios você irá viajar por diversas regiões do mundo, conhecendo as 7 Maravilhas do Mundo</p><br>
+            <p>Isso não seria <strong>MARAVILHOSO?</strong></p>
+
+
+            
+            <div class="sticky-container">
+                <img src="img/logo.png" alt="Logo do Site" class="imagem-sticky">
+                <div class="texto-empresa">
+                    <p>Na <strong>TRAVELING AROUND</strong>, acreditamos que cada viagem deve ser uma experiência rica e acessível. Com uma equipe de guias fluentes em diversas línguas, garantimos que você se sinta em casa em qualquer lugar do mundo.</p>
+                    <p>Nosos mapas de paradas abrangentes são meticulosamente planejados para cobrir dese os pontos turísticos mais famosos até jóias escondidas, assegurando que cada aventura seja inesquecível e sem preocupações.</p>
+                    <p>Prepare-se para explorar o mundo com quem realmente entende de viagem!</p>
+                </div>
+            </div>
+
+            <div style="height: 1200px; background-color: #f0f0f0; padding: 20px;">
+                <p>Além de conhecer esses lugares maravilhosos você já pensou em conhecer as suas comidas típicas?</p> <br>
+                <p>Abaixo você irá encontrar algumas das comidas que iremos apresentar para vocês.</p>
+                <div class="caixa-rolavel">
+                    <img src="img/pato-China.png" class="caixa-rolavel-img" alt="">
+                    <div class="descricao">
+                        <h3>Pato de Pequim</h3>
+                        <p>A culinária chinesa é vasta, mas a região próxima à Grande Muralha, especialmente a área de Beijin, é famosa por sabores marcantes e técnicas refinadas.</p>
+                        <p>O prato mais emblemáticos é o <strong>Pato de Pequim</strong>, conhecido por sua pele crocante e carne suculenta, servido em panquecas finas com molho hoisin e cebolinha. Outros destaques incluem o <strong>macarrão feito à mão</strong> e diversos tipos de <strong>dumplings</strong> (pasteizinhos recheados), essenciais na dieta do norte.</p>
+                        <p>Características: Sabores ricos, uso de trigo (em vez de arroz, que é mais comum no sul) e técnicas de preparo como a fritura rápida</p>
+                        <br><br>
+                    </div>
+
+                    <img src="img/periche-lomoSaltado-Peru.png" class="caixa-rolavel-img" alt="">
+                    <div class="descricao">
+                        <h3>Lomo Saltado e Aji de Galinha</h3>
+                        <p>Na serra o destaque é o Lomo Saltado que é feito de carne salteada com cebola, tomate e batatas fritas, servida com arroz, e o Aji de Galinha que é feito com frango desfiado em um molho cremoso e apimentado à base de queijo e pimenta ají amarillo.</p>
+                        <p>Características: Uso intenso de milho, batata e pimenta ají</p>
+                        <p>Este é o final do conteúdo da caixa rolável.</p>
+                    </div>
+                </div>
+            </div>
+
+        </main>
     </div>
+    
+    <footer class="rodape">
+        <p>&copy; 2024 Mini-Layout. Todos os direitos reservados.</p>
+    </footer>
+
 </body>
 </html>
