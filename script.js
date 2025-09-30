@@ -1,27 +1,25 @@
-document.addEventListener("DOMContentLoaded", function() {
-    const imagens = [
-        { src: "img/muralha-da-china.webp", legenda: "Muralha da China" },
-        { src: "img/Petra.webp", legenda: "Petra" },
-        { src: "img/cristo-redentor.jpg", legenda: "Cristo Redentor" },
-        { src: "img/machu-picchu.webp", legenda: "Machu Picchu" },
-        { src: "img/chichen-itza.jfif", legenda: "Chichen Itza" },
-        { src: "img/coliseu-roma.jfif", legenda: "Coliseu de Roma" },
-        { src: "img/taj-mahal.webp", legenda: "Taj Mahal" }
-    ];
+// Array de URLs e descrições para a troca de imagem
+const images = [
+    { src: "img/Petra.webp", alt: "Petra" },
+    { src: "img/coliseu-roma.jfif", alt: "Coliseu de Roma" },
+    { src: "img/taj-mahal.webp", alt: "Taj Mahal" }
+];
 
-    let indice = 0;
-    const imgEl = document.getElementById("carousel-img");
-    const captionEl = document.getElementById("carousel-caption");
+let currentIndex = 0;
 
-    function atualizarCarrossel() {
-        imgEl.src = imagens[indice].src;
-        captionEl.textContent = imagens[indice].legenda;
-    }
-
-    imgEl.addEventListener("click", () => {
-        indice = (indice + 1) % imagens.length;
-        atualizarCarrossel();
-    });
-
-    atualizarCarrossel();
-});
+function swapImage() {
+    const imgElement = document.getElementById('interactive-img');
+    
+    // Incrementa o índice, voltando para 0 se passar do final do array
+    currentIndex = (currentIndex + 1) % images.length;
+    
+    // Atualiza o src e o alt da imagem
+    imgElement.src = images[currentIndex].src;
+    imgElement.alt = images[currentIndex].alt;
+    
+    // Adiciona um efeito visual simples
+    imgElement.style.opacity = 0.5;
+    setTimeout(() => {
+        imgElement.style.opacity = 1;
+    }, 100);
+}

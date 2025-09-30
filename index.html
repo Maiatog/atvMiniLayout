@@ -3,167 +3,143 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mini Layout Responsivo</title>
+    <title>Traveling Around: As 7 Maravilhas</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <header class="cabecalho">
-        <h1>Traveling Around</h1>
+        <h1>TRAVELING AROUND</h1>
         <nav>
-            <a href="#">Home</a> 
-            <a href="#">Sobre</a> 
-            <a href="#">Contato</a>
+            <a href="#conteudo">Home</a> 
+            <a href="#planos">Planos e Pacotes</a> 
+            <a href="#contato">Contato</a>
         </nav>
-
     </header>
 
     <div class="main-content-wrapper">
 
         <aside class="menu-lateral">
-            <h2>Menu</h2><br>
-            <h4>Saiba mais:</h4><br>
+            <h2>Descubra:</h2>
+            <h4>Saiba mais sobre as Maravilhas:</h4>
             <ul>
-                <li>
-                    <a href="https://pt.wikipedia.org/wiki/Muralha_da_China" target="_blank">Muralha da China</a>
-                </li><br>
-                <li>
-                    <a href="https://pt.wikipedia.org/wiki/Petra" target="_blank">Petra</a>
-                </li><br>
-                <li>
-                    <a href="https://pt.wikipedia.org/wiki/Cristo_Redentor" target="_blank">Cristo Redentor</a>
-                </li><br>
-                <li>
-                    <a href="https://pt.wikipedia.org/wiki/Machu_Picchu" target="_blank">Machu Picchu</a>
-                </li><br>
-                <li>
-                    <a href="https://pt.wikipedia.org/wiki/Chich%C3%A9n_Itz%C3%A1" target="_blank">Chichen Itza</a>
-                </li><br>
-                <li>
-                    <a href="https://pt.wikipedia.org/wiki/Coliseu" target="_blank">Coliseu de Roma</a>
-                </li><br>
-                <li>
-                    <a href="https://pt.wikipedia.org/wiki/Taj_Mahal" target="_blank">Taj Mahal</a>
-                </li>
+                <li><a href="https://pt.wikipedia.org/wiki/Muralha_da_China" target="_blank">Muralha da China</a></li>
+                <li><a href="https://pt.wikipedia.org/wiki/Petra" target="_blank">Petra</a></li>
+                <li><a href="https://pt.wikipedia.org/wiki/Cristo_Redentor" target="_blank">Cristo Redentor</a></li>
+                <li><a href="https://pt.wikipedia.org/wiki/Machu_Picchu" target="_blank">Machu Picchu</a></li>
+                <li><a href="https://pt.wikipedia.org/wiki/Chich%C3%A9n_Itz%C3%A1" target="_blank">Chichen Itza</a></li>
+                <li><a href="https://pt.wikipedia.org/wiki/Coliseu" target="_blank">Coliseu de Roma</a></li>
+                <li><a href="https://pt.wikipedia.org/wiki/Taj_Mahal" target="_blank">Taj Mahal</a></li>
             </ul>
-
         </aside>
 
-            <section class="galeria img">
-                <div class="linha-galeria">
-                    <img src="img/muralha-da-china.webp" alt="Muralha da China">
-                    <img src="img/Petra.webp" alt="Petra">
-                    <img src="img/cristo-redentor.jpg" alt="Cristo Redentor">
-                    <img src="img/machu-picchu.webp" alt="Machu Picchu">
+        <main class="main-content-area">
+
+            <section id="conteudo" class="main-section">
+                <h2>🌍 Rota das 7 Maravilhas do Mundo Moderno</h2>
+                
+                <p class="introducao">Você já teve aquela vontade de pegar sua mochila e sair rodando mundo afora? A <strong>Traveling Around</strong> transforma esse sonho em realidade. Nossos pacotes são desenhados para uma imersão total nas culturas das 7 Maravilhas, garantindo guias multilíngues e rotas otimizadas.</p>
+
+                <div class="galeria">
+                    <h3>Explore Antes de Partir</h3>
+                    <div class="linha-galeria">
+                        <img src="img/muralha-da-china.webp" alt="Muralha da China" class="img-gallery img-hover-border">
+                        
+                        <img id="interactive-img" src="img/Petra.webp" alt="Petra" class="img-gallery" onclick="swapImage()">
+                        
+                        <img src="img/cristo-redentor.jpg" alt="Cristo Redentor" class="img-gallery">
+                        <img src="img/machu-picchu.webp" alt="Machu Picchu" class="img-gallery">
+                    </div>
+                    <div class="linha-galeria">
+                        <img src="img/chichen-itza.jfif" alt="Chichen Itza" class="img-gallery">
+                        <img src="img/coliseu-roma.jfif" alt="Coliseu de Roma" class="img-gallery">
+                        <img src="img/taj-mahal.webp" alt="Taj Mahal" class="img-gallery">
+                    </div>
                 </div>
-                <div class="linha-galeria">
-                    <img src="img/chichen-itza.jfif" alt="Chichen Itza">
-                    <img src="img/coliseu-roma.jfif" alt="Coliseu de Roma">
-                    <img src="img/taj-mahal.webp" alt="Taj Mahal">
-                </div>    
-            </section>
 
-        <main class="conteudo-principal">
-            <h2>As 7 Maravilhas do Mundo</h2><br>
-            <p>Você já teve aquela vontade de pegar sua mochila e sair rodando mundo a fora?</p><br>
-            <p>Então, aqui com a Traveling você pode estar usufruindo desta grande realização, com nossos passeios você irá viajar por diversas regiões do mundo, conhecendo as 7 Maravilhas do Mundo</p><br>
-            <p>Isso não seria <strong>MARAVILHOSO?</strong></p>
-
-
-            
-            <div class="sticky-container">
-                <img src="img/logo.png" alt="Logo do Site" class="imagem-sticky">
-                <div class="texto-empresa">
-                    <p>Na <strong>TRAVELING AROUND</strong>, acreditamos que cada viagem deve ser uma experiência rica e acessível. Com uma equipe de guias fluentes em diversas línguas, garantimos que você se sinta em casa em qualquer lugar do mundo.</p>
-                    <p>Nosos mapas de paradas abrangentes são meticulosamente planejados para cobrir dese os pontos turísticos mais famosos até jóias escondidas, assegurando que cada aventura seja inesquecível e sem preocupações.</p>
+                <div class="sticky-container">
+                    <img src="img/logo.png" alt="Logo do Site" class="imagem-sticky">
+                    <div class="texto-empresa">
+                        <h3>Por que escolher a Traveling Around?</h3>
+                        <p>Na <strong>TRAVELING AROUND</strong>, garantimos que você se sinta em casa em qualquer lugar do mundo. Nossos mapas de paradas abrangentes cobrem desde os pontos turísticos mais famosos até joias escondidas, assegurando que cada aventura seja inesquecível e sem preocupações.</p>
+                    </div>
                 </div>
-            </div>
 
-            <div style="height: 600px; background-color: lightgrey; padding: 20px; margin-top: 0px; margin-bottom: auto;">
-                <p>Além de conhecer esses lugares maravilhosos você já pensou em conhecer as suas comidas típicas?</p> <br>
-                <p>Abaixo você irá encontrar algumas das comidas que iremos apresentar para vocês.</p>
+                <h3>Gastronomia ao Redor do Mundo</h3>
+                <p>Nossas rotas incluem degustações e workshops culinários. Prepare seu paladar!</p>
+                
                 <div class="caixa-rolavel">
                     <div class="item-rolavel">
-                        <img src="img/pato-China.png" class="caixa-rolavel-img" alt="prato-pato">
+                        <img src="img/pato-China.png" class="caixa-rolavel-img" alt="Pato de Pequim">
                         <div class="descricao">
-                            <h3>Pato de Pequim</h3>
-                            <p>A culinária chinesa é vasta, mas a região próxima à Grande Muralha, especialmente a área de Beijin, é famosa por sabores marcantes e técnicas refinadas.</p>
-                            <p>O prato mais emblemáticos é o <strong>Pato de Pequim</strong>, conhecido por sua pele crocante e carne suculenta, servido em panquecas finas com molho hoisin e cebolinha. Outros destaques incluem o <strong>macarrão feito à mão</strong> e diversos tipos de <strong>dumplings</strong> (pasteizinhos recheados), essenciais na dieta do norte.</p>
-                            <p>Características: Sabores ricos, uso de trigo (em vez de arroz, que é mais comum no sul) e técnicas de preparo como a fritura rápida</p>
-                            <br><br>
+                            <h4>Pato de Pequim (China)</h4>
+                            <p>O prato mais emblemático da região da Grande Muralha, conhecido por sua pele crocante. Servido em panquecas com molho hoisin. Sabores ricos e uso de trigo.</p>
                         </div>
                     </div>
-
                     <div class="item-rolavel">
-                        <img src="img/periche-lomoSaltado-Peru.png" class="caixa-rolavel-img" alt="prato-lomosaltado">
+                        <img src="img/periche-lomoSaltado-Peru.png" class="caixa-rolavel-img" alt="Lomo Saltado">
                         <div class="descricao">
-                            <h3>Lomo Saltado e Aji de Galinha</h3>
-                            <p>Na serra o destaque é o Lomo Saltado que é feito de carne salteada com cebola, tomate e batatas fritas, servida com arroz, e o Aji de Galinha que é feito com frango desfiado em um molho cremoso e apimentado à base de queijo e pimenta ají amarillo.</p>
-                            <p>Características: Uso intenso de milho, batata e pimenta ají</p>
-                            <p>Este é o final do conteúdo da caixa rolável.</p><br><br> 
-                        </div>
-                    </div> 
-
-                    <div class="item-rolavel">
-                        <img src="img/cochinita-pibil-Mexico.png" class="caixa-rolavel-img" alt="prato-cochinita">
-                        <div class="descricao">
-                            <h3>Cochinita Pobil</h3>
-                            <p>A <strong>Cochinita Pibil</strong> é o prato mais famoso:carne de porco marinada em achiote e suco de laranja azeda, cozida lentamente e servida em tacos ou tortas.</p>
-                            <p>Outros pratos regionais incluem a <strong>Sopa de Lima</strong> (sopa de frango com tortilhas e um toque cítrico) e os <strong>Panuchos</strong> (tortilhas recheadas e fritas).</p>
-                            <p>Características: Uso de milho, feijão e temperos distintos como a pasta achiote, coentro e pimenta habanero.</p><br><br>
+                            <h4>Lomo Saltado (Peru)</h4>
+                            <p>Na serra andina de Machu Picchu, o Lomo Saltado (carne salteada) é um destaque. Uso intenso de milho, batata e pimenta ají.</p>
                         </div>
                     </div>
-
                     <div class="item-rolavel">
-                        <img src="img/carbonara-Itália.png" class="caixa-rolavel-img" alt="prato-carbonara">
+                        <img src="img/cochinita-pibil-Mexico.png" class="caixa-rolavel-img" alt="Cochinita Pibil">
                         <div class="descricao">
-                            <h3>Massa Carbonara</h3>
-                            <p>é um prato típico tipico italiano consiste em uma massa com ovos guanciale ou pancetta e queijo pecorino.</p>
-                            <p>Outros pratos famosos incluem a <strong>Lasagna</strong>, <strong>Risotto</strong> e <strong>Tiramisu</strong>.</p>
-                            <p>Caracteristicas: Foco em massas artesanais, queijo romano, azeite de olívia e vegetais frescos.</p><br><br>
+                            <h4>Cochinita Pibil (México)</h4>
+                            <p>Prato maia famoso na região de Chichén Itzá: carne de porco marinada em achiote e cozida lentamente, servida em tacos. Uso de coentro e pimenta habanero.</p>
                         </div>
                     </div>
-
                     <div class="item-rolavel">
-                        <img src="img/mughlai-chicken-korma-naan-India.png" class="caixa-rolavel-img" alt="prato-mughlai">
+                        <img src="img/carbonara-Itália.png" class="caixa-rolavel-img" alt="Carbonara">
                         <div class="descricao">
-                            <h3>Mughlai Chicken</h3>
-                            <p>O <strong>Mughlai Chicken</strong> (curry cremoso e suave, geralmente com iogurte ou castanhas) refletem a opulência imperial</p>
-                            <p>O pão <strong>Naan</strong> (assado no tandoor) e o <strong>Biryani</strong> (arroz aromático com especiarias e carne) são acompanhamentos essenciais.</p>
-                            <p>Caracteristicas: Uso intenso de especiarias inteiras e moídas (como cardamomo, cravo e canela), laticínios (iogurte e ghee - manteiga clarificcada) e o forno tandoor para pães e carnes.</p><br><br>
+                            <h4>Massa Carbonara (Itália)</h4>
+                            <p>Perto do Coliseu, o Carbonara reina: massa com ovos, guanciale e queijo pecorino. Foco em massas artesanais e azeite de oliva.</p>
                         </div>
-                    </div> 
-
-                    <div class="item-rolavel">
-                        <img src="img/mansaf-Jordania.png" class="caixa-rolavel-img" alt="prato-mansaf">
-                        <div class="descricao">
-                            <h3>Mansaf</h3>
-                            <p>O prato nacional é o <strong>Mansaf</strong>, feito com carne de cordeiro cozida em um molho de iogurte seco fermentado (jameed), servido sobre arroz e pão pita.</p>
-                            <p>Características: Uso abundante de azeite de oliva, limão, hortelã, salsa e carne de cordeiro ou cabra.</p><br><br>
-                        </div>
-                    </div> 
-
-                    <div class="item-rolavel">
-                        <img src="img/feijoada-Brasil.png" class="caixa-rolavel-img" alt="prato-feijoada">
-                        <div class="descricao">
-                            <h3>Feijoada</h3>
-                            <p>A <strong>Feijoada</strong> é o prato mais emblemático, feito com feijão preto, várias partes do porco (como costelinha, orelha e rabo) e linguiça, servido com arroz, couve refogada e laranja fatiada.</p>
-                            <p>Outros pratos populares incluem o <strong>Moqueca</strong> (ensopado de peixe com leite de coco e dendê) e o <strong>Pão de Queijo</strong> (bolinhos de queijo feitos com polvilho).</p>
-                            <p>Características: Uso de feijão preto, carnes suínas, arroz, farofa e ingredientes frescos como laranja e couve.</p><br><br>
-                        </div>
-                    </div>    
+                    </div>
+                </div> 
+            </section>
+            
+            <section id="planos" class="main-section section-padding">
+                <h2>💰 Planos e Pacotes</h2>
+                
+                <div class="plano-box">
+                    <h3>Pacote Bronze: A Rota Clássica</h3>
+                    <p>Visita a <strong>4 Maravilhas</strong> (Coliseu, Cristo Redentor, Chichén Itzá e Taj Mahal). Guias em Inglês/Espanhol. Acomodação padrão. Duração: <strong>15 dias</strong>.</p>
+                    <a href="#contato" class="btn-cta">Ver Preços</a>
                 </div>
-            </div>
+
+                <div class="plano-box">
+                    <h3>Pacote Prata: Expedição Balanceada</h3>
+                    <p>Visita a <strong>6 Maravilhas</strong> (inclui as do Bronze, mais Machu Picchu e Muralha da China). Guias bilíngues e acomodação superior. Flexibilidade moderada. Duração: <strong>22 dias</strong>.</p>
+                    <a href="#contato" class="btn-cta">Saiba Mais</a>
+                </div>
+
+                <div class="plano-box">
+                    <h3>Pacote Ouro: Exploração Total</h3>
+                    <p>Visita a <strong>todas as 7 Maravilhas</strong>! Guias multilíngues fluentes. Acomodação premium e roteiro personalizável. 30 dias de imersão cultural completa. Duração: <strong>30 dias</strong>.</p>
+                    <a href="#contato" class="btn-cta">Reservar Agora</a>
+                </div>
+            </section>
+
+            <section id="contato" class="main-section section-padding">
+                <h2>📞 Contato</h2>
+                <p>Pronto para a sua aventura? Entre em contato conosco e comece a planejar sua jornada.</p>
+                <form class="form-contato">
+                    <input type="text" placeholder="Seu Nome Completo">
+                    <input type="email" placeholder="Seu Email">
+                    <textarea placeholder="Sua Mensagem / Dúvida sobre o pacote"></textarea>
+                    <button type="submit" class="btn-cta">Enviar Mensagem</button>
+                </form>
+            </section>
 
         </main>
     </div>
-        <div id="carousel-container" style="width: 300px; margin: 40px auto; text-align: center;">
-            <img id="carousel-img" src="img/muralha-da-china.webp" alt="Ponto Turístico" style="width: 100%; height: 200px; object-fit: cover; border: 2px solid #004d7a;">
-            <p id="carousel-caption" style="margin-top: 8px; font-weight: bold;">Muralha da China</p>
-        </div>
-        <script src="script.js"></script>
+
     <footer class="rodape">
-        <p>&copy; 2025 Mini-Layout. Todos os direitos reservados.</p>
+        <p>&copy; 2025 Traveling Around. Sua Jornada Sem Fronteiras.</p>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>

@@ -1,157 +1,250 @@
-/* Reset Básico */
+/* Reset Básico e Variáveis de Cor */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth; /* Para rolagem suave dos links */
+}
+
+:root {
+    --cor-primaria: #004d7a;    /* Header/Footer/Rodapé */
+    --cor-secundaria: #5cb3e8;  /* Menu Lateral*/
+    --cor-acento: #FF9800;      /* Botões/Destaque */
+    --cor-fundo-suave: #f5f5dc; /* Caixa Rolável */
+    --cor-texto: #333;
 }
 
 body {
     font-family: Arial, sans-serif;
-    padding-top: 60px; 
-    padding-bottom: 40px; 
-    background-color: lightgrey;
+    padding-top: 60px; /* Espaço para o cabeçalho fixo */
+    padding-bottom: 40px; /* Espaço para o rodapé fixo */
+    background-color: #f0f0f0;
+    color: var(--cor-texto);
 }
 
-/* 1. Cabeçalho Fixo (position: fixed) */
+/*Cabeçalho Fixo */
 .cabecalho {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    height: 60px; /* Altura do cabeçalho */
-    background-color: #004d7a;
+    height: 60px;
+    background-color: var(--cor-primaria);
     color: white;
     padding: 10px 20px;
-    z-index: 1000; 
+    z-index: 1000;
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+.cabecalho h1 {
+    font-size: 1.5em;
+    margin: 0;
 }
 
 .cabecalho a {
     color: white;
     text-decoration: none;
     margin-left: 15px;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.cabecalho a:hover {
+    color: var(--cor-acento);
 }
 
 .main-content-wrapper {
     width: 100%;
-    padding: 20px; 
+    padding: 0;
 }
 
-/* 2. Menu Lateral (float: left) */
+/* Clearfix para o wrapper que contém o float */
+.main-content-wrapper::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Menu Lateral (float: left) */
 .menu-lateral {
-    float: left; /* Flutua à esquerda */
-    width: 200px;
-    background-color: #5cb3e8;
+    float: left;
+    width: 250px; /* Largura fixa para o menu lateral */
+    background-color: var(--cor-secundaria);
     padding: 15px;
-    min-height: 500px; /* Altura mínima para visualização */
-    border: #000 solid 1px;
+    min-height: calc(100vh - 100px); /* Altura mínima para cobrir a tela menos cabeçalho e rodapé */
+    color: var(--cor-texto);
 }
 
 .menu-lateral ul {
     list-style: none;
+    padding: 0;
+}
+
+.menu-lateral li {
+    margin-bottom: 5px;
 }
 
 .menu-lateral a {
-    margin-bottom: 8px;
     display: block;
-    color: #1b1b1b;
+    color: var(--cor-texto);
     text-decoration: none;
+    padding: 5px 0;
+    border-bottom: 1px dotted rgba(0, 0, 0, 0.2);
+    transition: color 0.3s;
 }
 
-/* 3. Área de Conteúdo Principal (ao lado do menu) */
-.conteudo-principal {
-    /* Ocupa o espaço restante ao lado do elemento flutuante */
-    margin-left: 220px; 
-    padding: 15px;
+.menu-lateral a:hover {
+    color: var(--cor-primaria);
+    font-weight: bold;
+}
+
+/* Área de Conteúdo Principal */
+.main-content-area {
+    margin-left: 270px; /* Espaço para o menu lateral */
+    padding: 20px;
+}
+
+.main-section {
+    padding-top: 20px; /* Espaço extra para o cabeçalho fixo não cobrir o título */
+    margin-bottom: 50px;
 }
 
 /* Galeria de Imagens */
-.galeria img {
-    width: 150px;
-    height: 100px;
-    margin: 5px;
-    border: 1px solid #000000;
+.galeria {
+    margin: 20px 0;
+    text-align: center;
+}
+
+.img-gallery {
+    width: 180px;
+    height: 120px;
+    margin: 8px;
+    object-fit: cover;
+    border: 3px solid var(--cor-primaria);
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Efeito de Zoom no Hover */
+.img-gallery:hover {
+    transform: scale(1.05);
+}
+
+/* Hover na Borda (Borda Laranja no hover) */
+.img-hover-border:hover {
+    border: 3px solid var(--cor-acento);
 }
 
 .linha-galeria {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
     gap: 15px;
     margin-bottom: 10px;
+}
+
+/* Imagem com position: sticky */
+.sticky-container {
+    background-color: var(--cor-fundo-suave);
+    padding: 20px;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    display: flex;
+    gap: 20px;
+    align-items: flex-start; /* Alinha o conteúdo ao topo */
+}
+
+.imagem-sticky {
+    position: sticky;
+    width: 150px;
+    height: 150px;
+    top: 80px; /* Posição onde ele 'gruda' (abaixo do cabeçalho) */
+    border: 3px solid var(--cor-primaria);
+    align-self: flex-start;
+}
+
+.texto-empresa {
+    flex-grow: 1;
+    font-size: 1em;
+    padding-right: 10px;
+}
+
+/* Caixa de Texto Rolável */
+.caixa-rolavel {
+    margin-top: 20px;
+    padding: 15px;
+    border: 1px solid #ccc;
+    height: 450px;
+    overflow-y: auto; /* Adiciona barra de rolagem vertical se o conteúdo exceder */
+    background-color: var(--cor-fundo-suave);
 }
 
 .item-rolavel {
     display: flex;
     align-items: flex-start;
-    margin-bottom: 20px;
-}
-
-/* 4. Caixa de Texto Rolável (overflow: auto) */
-.caixa-rolavel {
-    margin-top: 20px;
-    padding: 10px;
-    border: 1px solid #000;
-    height: 500px; /* Limite de altura */
-    overflow: auto; /* Adiciona barra de rolagem se necessário */
-}
-
-.descricao {
-    text-align: justify;
+    margin-bottom: 25px;
+    padding-bottom: 15px;
+    border-bottom: 1px dashed #ccc;
 }
 
 .caixa-rolavel-img {
-    width: 150px;
-    height: 150px;
-    margin: 5px;
-
+    width: 120px;
+    height: 120px;
+    min-width: 120px; /* Garante que a imagem não encolha */
+    object-fit: cover;
+    margin-right: 15px;
+    border: 2px solid var(--cor-acento);
 }
 
-/* 5. Rodapé Fixo (position: fixed) */
+/* Planos e Contato Stilo */
+.section-padding {
+    padding: 40px 0;
+}
+
+.plano-box {
+    border: 2px solid var(--cor-secundaria);
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.btn-cta {
+    display: inline-block;
+    background-color: var(--cor-acento);
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 10px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.btn-cta:hover {
+    background-color: #e07b00; /* Laranja mais escuro no hover */
+}
+
+.form-contato input, .form-contato textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Rodapé Fixo */
 .rodape {
-    position: fixed; /* Rodapé fixo na parte inferior */
+    position: fixed;
     bottom: 0;
     left: 0;
     width: 100%;
-    height: 40px; /* Altura do rodapé */
-    background-color: #004d7a;
+    height: 40px;
+    background-color: var(--cor-primaria);
     color: white;
     text-align: center;
-    line-height: 40px; /* Centraliza o texto verticalmente */
+    line-height: 40px;
     z-index: 1000;
-}
-
-/* 6. Imagem com position: sticky */
-.sticky-container {
-    background-color: lightgray;
-    padding: 10px;
-    margin-bottom: 20px;
-    display: flex;
-    gap: 20px;
-}
-
-.imagem-sticky {
-    position: sticky;
-    margin-left: 10px;
-    width: 150px;
-    height: 150px;
-    top: 80px; /* Posição onde ele 'gruda' (abaixo do cabeçalho) */
-    border: 3px solid #070707;
-    align-self: flex-start; /* Ajuda a posicionar corretamente dentro do flexbox */
-}
-
-.texto-empresa {
-    margin-top: 50px;
-    margin-bottom: 50px;
-    font-size: 16px;
-    line-height: 1.5;
-    border: #000 solid 1px;
-}
-
-/* Clearfix opcional (boa prática para elementos flutuantes) */
-.main-content-wrapper::after {
-    content: "";
-    display: table;
-    clear: both;
 }
